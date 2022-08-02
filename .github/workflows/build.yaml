@@ -33,6 +33,6 @@ jobs:
         run: |
           curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
           chmod +x /usr/local/bin/argocd
-          ARGO_SERVER=$ARGOCD_SERVER
-          argocd app sync eksworkshop-cd-pipeline --auth-token \${{ secrets.ARGOCD_TOKEN }} --server $ARGOCD_SERVER --insecure
+          #ARGO_SERVER=$ARGOCD_SERVER
+          argocd app sync eksworkshop-cd-pipeline --auth-token \${{ secrets.ARGOCD_TOKEN }} --server a809b46f6e90d4e6190dfe845e4190c5-592036370.ap-northeast-2.elb.amazonaws.com --insecure
 
